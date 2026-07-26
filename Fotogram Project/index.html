@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    
+    <link rel="icon" type="image/svg+xml" href="./assets/img/head-second.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-logo">
+            <img src="./assets/img/head-second.svg" alt="Logo Icon">
+            <img src="./assets/img/head-main.svg" alt="Fotogram Logo">
+        </div>
+    </header>
+
+    <main>
+        <h1>Your personal photo album</h1>
+        
+       
+        <section id="gallery-container">
+        </section>
+
+       
+        <div id="overlay" class="d-none" onclick="closeOverlayOnBackground(event)">
+            <article class="dialog-card">
+                <header class="dialog-header">
+                    <h2 id="overlay-title"></h2>
+                    <button type="button" id="close-btn" class="close-btn" onclick="closeOverlay()" aria-label="Schließen">&times;</button>
+                </header>
+
+                <figure class="dialog-figure">
+                    <img id="overlay-img" src="" alt="">
+                </figure>
+
+                <nav class="dialog-controls">
+                    <button type="button" class="nav-btn" onclick="prevImage()" aria-label="Vorheriges Bild">&larr;</button>
+                    <span id="overlay-counter"></span>
+                    <button type="button" class="nav-btn" onclick="nextImage()" aria-label="Nächstes Bild">&rarr;</button>
+                </nav>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./assets/img/icon.svg" alt="DA Logo">
+                <img src="./assets/img/Text.svg" alt="Developer Akademie">
+            </div>
+            <p>&copy; 2023 Developer Akademie GmbH</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
